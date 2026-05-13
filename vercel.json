@@ -1,4 +1,19 @@
 {
-  "outputDirectory": ".",
-  "routes": [{ "src": "/(.*)", "dest": "/$1" }]
+  "version": 2,
+  "builds": [
+    {
+      "src": "ghg-dashboard.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/ghg-dashboard.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
 }
